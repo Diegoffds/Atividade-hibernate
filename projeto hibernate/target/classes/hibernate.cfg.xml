@@ -21,7 +21,7 @@
         
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <!-- Suas classes -->
+        <!-- Classes -->
         <mapping class="Classes.Item"/>
         <mapping class="Classes.Pedido"/>
         <mapping class="Classes.Produto"/>

@@ -1,5 +1,7 @@
 package Classes;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -8,18 +10,20 @@ import jakarta.persistence.Table;
 @Table(name = "produtoPerecivel")
 
 public class ProdutoPerecivel extends Produto{
-    private LocalDate validade;
+    private Date validade;
 
-    public ProdutoPerecivel (int id, String nome, float preco, int estoque, LocalDate validade) {
+    public ProdutoPerecivel () {}
+
+    public ProdutoPerecivel (int id, String nome, float preco, int estoque, Date validade) {
         super(id, nome, preco, estoque);
         this.validade = validade;
     }
-    public ProdutoPerecivel (String nome, float preco, int estoque, LocalDate validade) {
+    public ProdutoPerecivel (String nome, float preco, int estoque, Date validade) {
         super(nome, preco, estoque);
         this.validade = validade;
     }
 
-    public LocalDate getValidade () {
+    public Date getValidade () {
         return validade;
     }
 }
